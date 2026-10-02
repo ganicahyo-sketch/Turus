@@ -54,8 +54,18 @@ Nama file mode rentang:
 - Mode seluruh histori menggunakan batas awal `2000-01-01`. Ini dimaksudkan untuk mencakup histori channel modern tanpa membutuhkan User API Key untuk membaca waktu pembuatan channel.
 - File sementara berada di cache aplikasi dan dihapus setelah berhasil disimpan.
 
-## Build
-Gunakan Android Studio dengan Android SDK Platform 36 dan Android Gradle Plugin 8.13.0 atau lebih baru. Jalankan `assembleDebug` untuk membuat APK debug.
+## Build via GitHub Actions
+1. Upload seluruh isi folder proyek ini ke repository GitHub (pastikan folder `app`, `build.gradle`, `settings.gradle`, dan `.github/workflows/build-apk.yml` berada di root repository).
+2. Buka tab **Actions**.
+3. Pilih workflow **Build APK - STASIUN CUACA DESA TURUS**.
+4. Klik **Run workflow** lalu pilih branch `main`.
+5. Setelah selesai, buka run yang berhasil dan unduh artifact **STASIUN-CUACA-DESA-TURUS-v1.1-debug**.
+6. Di dalam artifact terdapat `app-debug.apk`, yang dapat dipasang pada Android.
+
+Workflow menggunakan JDK 17, Android SDK Platform 36, Build Tools 36.0.0, dan Gradle 8.13. Tidak diperlukan Gradle wrapper untuk workflow ini.
+
+## Build via Android Studio
+Gunakan Android Studio dengan Android SDK Platform 36 dan JDK 17. Jalankan `assembleDebug` untuk membuat APK debug.
 
 ## Referensi API
 Dokumentasi resmi ThingSpeak/MathWorks:
