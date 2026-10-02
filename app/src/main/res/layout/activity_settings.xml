@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@drawable/bg_root" android:padding="16dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PENGATURAN THINGSPEAK" android:textColor="@color/text_main" android:textStyle="bold" android:textSize="20sp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Channel ID dan Read API Key dapat diubah kapan saja." android:textColor="@color/text_muted" android:textSize="12sp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="CHANNEL ID" android:textColor="@color/cyan" android:textStyle="bold" android:textSize="11sp"/>
+    <EditText android:id="@+id/channel" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="6dp" android:background="@drawable/bg_edit" android:paddingStart="14dp" android:paddingEnd="14dp" android:hint="Contoh: 266256" android:hintTextColor="@color/text_muted" android:textColor="@color/text_main" android:inputType="number"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="READ API KEY" android:textColor="@color/cyan" android:textStyle="bold" android:textSize="11sp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="6dp" android:orientation="horizontal">
+        <EditText android:id="@+id/readKey" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/bg_edit" android:paddingStart="14dp" android:paddingEnd="14dp" android:hint="Read API Key" android:hintTextColor="@color/text_muted" android:textColor="@color/text_main" android:inputType="text"/>
+        <TextView android:id="@+id/toggleKey" android:layout_width="90dp" android:layout_height="match_parent" android:layout_marginStart="8dp" android:gravity="center" android:text="SEMBUNYIKAN" android:textColor="@color/text_main" android:textSize="10sp" android:background="@drawable/bg_chip"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:orientation="horizontal">
+        <TextView android:id="@+id/save" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="SIMPAN" android:textColor="@color/navy_950" android:textStyle="bold" android:background="@drawable/bg_button"/>
+        <Space android:layout_width="8dp" android:layout_height="1dp"/>
+        <TextView android:id="@+id/cancel" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="BATAL" android:textColor="@color/text_main" android:background="@drawable/bg_chip"/>
+    </LinearLayout>
+    <TextView android:id="@+id/info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="Aplikasi menggunakan endpoint ThingSpeak feeds/last.json. Untuk channel privat, Read API Key diperlukan." android:textColor="@color/text_muted" android:textSize="11sp"/>
+</LinearLayout>
