@@ -1,0 +1,23 @@
+# Android Studio / IntelliJ
+.gradle/
+.idea/
+*.iml
+local.properties
+
+# Build output
+build/
+app/build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Keystore/signing files - never commit secrets
+*.jks
+*.keystore
+keystore.properties
+
+# Temporary
+captures/
+.externalNativeBuild/
+.cxx/
