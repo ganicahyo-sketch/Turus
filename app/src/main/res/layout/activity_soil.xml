@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/bg_root" fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="DATA TANAH 7-IN-1" android:textColor="@color/text_main"
+            android:textStyle="bold" android:textSize="20sp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:text="Masukkan hasil sensor atau baca sensor USB/RS485 dengan USB-OTG. Satuan dibuat sederhana untuk petani."
+            android:textColor="@color/text_muted" android:textSize="12sp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:text="SUMBER DATA" android:textColor="@color/cyan" android:textStyle="bold" android:textSize="11sp"/>
+        <Spinner android:id="@+id/soilSource" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="4dp"/>
+        <TextView android:id="@+id/readSoilUsb" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="8dp"
+            android:gravity="center" android:text="BACA SENSOR USB / RS485" android:textColor="@color/navy_950" android:textStyle="bold" android:textSize="11sp" android:background="@drawable/bg_button"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp"
+            android:text="PENGATURAN SENSOR USB / RS485" android:textColor="@color/cyan" android:textStyle="bold" android:textSize="11sp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Alamat sensor (1–247)" android:textColor="@color/text_main" android:textSize="12sp"/>
+        <EditText android:id="@+id/soilSlaveAddress" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="3dp" android:background="@drawable/bg_edit" android:paddingHorizontal="12dp" android:hint="Contoh: 1" android:textColor="@color/text_main" android:textColorHint="@color/text_muted" android:inputType="number" android:singleLine="true"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Register awal (contoh 0x0000 atau 48)" android:textColor="@color/text_main" android:textSize="12sp"/>
+        <EditText android:id="@+id/soilStartRegister" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="3dp" android:background="@drawable/bg_edit" android:paddingHorizontal="12dp" android:hint="Contoh: 0x0000" android:textColor="@color/text_main" android:textColorHint="@color/text_muted" android:singleLine="true"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Kecepatan komunikasi" android:textColor="@color/text_main" android:textSize="12sp"/>
+        <Spinner android:id="@+id/soilBaud" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="3dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Pola alamat data sensor" android:textColor="@color/text_main" android:textSize="12sp"/>
+        <Spinner android:id="@+id/soilRegisterProfile" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="3dp"/>
+        <TextView android:id="@+id/soilSettings" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Catatan satuan dan sensor" android:textColor="@color/text_muted" android:textSize="11sp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="14dp" android:background="@drawable/bg_panel" android:padding="14dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="1. KELEMBAPAN TANAH" android:textColor="@color/text_main" android:textStyle="bold" android:textSize="11sp"/>
+            <EditText android:id="@+id/soilMoisture" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="4dp" android:hint="Contoh: 45" android:inputType="numberDecimal" android:background="@drawable/bg_edit" android:paddingHorizontal="12dp" android:textColor="@color/text_main" android:textColorHint="@color/text_muted" android:singleLine="true" android:imeOptions="actionNext"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="% — isi angka 0 sampai 100" android:textColor="@color/text_muted" android:textSize="10sp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="2. SUHU TANAH" android:textColor="@color/text_main" android:textStyle="bold" android:textSize="11sp"/>
+            <EditText android:id="@+id/soilTemperature" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="4dp" android:hint="Contoh: 28.5" android:inputType="numberDecimal|numberSigned" android:background="@drawable/bg_edit" android:paddingHorizontal="12dp" android:textColor="@color/text_main" android:textColorHint="@color/text_muted" android:singleLine="true"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="°C" android:textColor="@color/text_muted" android:textSize="10sp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="3. KEASAMAN TANAH" android:textColor="@color/text_main" android:textStyle="bold" android:textSize="11sp"/>
+            <EditText android:id="@+id/soilPh" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="4dp" android:hint="Contoh: 6.2" android:inputType="numberDecimal" android:background="@drawable/bg_edit" android:paddingHorizontal="12dp" android:textColor="@color/text_main" android:textColorHint="@color/text_muted" android:singleLine="true"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="pH — angka lebih kecil berarti lebih asam" android:textColor="@color/text_muted" android:textSize="10sp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="4. KADAR GARAM TANAH" android:textColor="@color/text_main" android:textStyle="bold" android:textSize="11sp"/>
+            <EditText android:id="@+id/soilEc" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="4dp" android:hint="Contoh: 1500" android:inputType="numberDecimal" android:background="@drawable/bg_edit" android:paddingHorizontal="12dp" android:textColor="@color/text_main" android:textColorHint="@color/text_muted" android:singleLine="true"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="µS/cm — masukkan langsung angka yang ditampilkan sensor, misalnya 1500" android:textColor="@color/text_muted" android:textSize="10sp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="5. NITROGEN" android:textColor="@color/text_main" android:textStyle="bold" android:textSize="11sp"/>
+            <EditText android:id="@+id/soilN" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="4dp" android:hint="Contoh: 32" android:inputType="numberDecimal" android:background="@drawable/bg_edit" android:paddingHorizontal="12dp" android:textColor="@color/text_main" android:textColorHint="@color/text_muted" android:singleLine="true"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="mg/kg" android:textColor="@color/text_muted" android:textSize="10sp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="6. FOSFOR" android:textColor="@color/text_main" android:textStyle="bold" android:textSize="11sp"/>
+            <EditText android:id="@+id/soilP" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="4dp" android:hint="Contoh: 25" android:inputType="numberDecimal" android:background="@drawable/bg_edit" android:paddingHorizontal="12dp" android:textColor="@color/text_main" android:textColorHint="@color/text_muted" android:singleLine="true"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="mg/kg" android:textColor="@color/text_muted" android:textSize="10sp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="7. KALIUM" android:textColor="@color/text_main" android:textStyle="bold" android:textSize="11sp"/>
+            <EditText android:id="@+id/soilK" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="4dp" android:hint="Contoh: 180" android:inputType="numberDecimal" android:background="@drawable/bg_edit" android:paddingHorizontal="12dp" android:textColor="@color/text_main" android:textColorHint="@color/text_muted" android:singleLine="true"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="mg/kg" android:textColor="@color/text_muted" android:textSize="10sp"/>
+        </LinearLayout>
+
+        <TextView android:id="@+id/saveSoil" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="12dp" android:gravity="center" android:text="SIMPAN &amp; ANALISIS" android:textColor="@color/navy_950" android:textStyle="bold" android:textSize="11sp" android:background="@drawable/bg_button"/>
+        <TextView android:id="@+id/soilStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Belum ada pembacaan sensor." android:textColor="@color/text_muted" android:textSize="11sp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:background="@drawable/bg_panel" android:padding="14dp">
+            <TextView android:id="@+id/soilAnalysis" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Isi 7 nilai tanah untuk melihat analisis dan rekomendasi." android:textColor="@color/text_main" android:textSize="13sp" android:lineSpacingExtra="2dp"/>
+        </LinearLayout>
+        <Space android:layout_width="1dp" android:layout_height="20dp"/>
+    </LinearLayout>
+</ScrollView>
